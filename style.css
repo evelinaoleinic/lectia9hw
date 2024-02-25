@@ -1,0 +1,60 @@
+ :root {
+    --title-font: 3rem;
+    --text-font: 1.5rem;
+    --title-font-weight: 800px;
+    --text-font-weight: 200px;
+    --letter-spacing: 5px;
+
+}
+.titlu {
+    font-size: var(--title-font);
+    font-weight: var(--title-font-weight);
+    letter-spacing: var(--letter-spacing);
+}
+.paragraf {
+    font-size: var(--text-font);
+    font-weight: var(--text-font-weight);
+}
+
+.spinner {
+    width: 150px;
+    height:150px;
+    position: relative;
+}
+.partea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    animation: rotate var(--duration) linear infinite;
+    mix-blend-mode: overlay;
+
+}
+.partea1 {
+    border-top: 10px solid plum;
+    --duration: 2s;
+    
+}
+.partea2 {
+    border-bottom: 10px solid goldenrod;
+    --duration: 1s;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0)}
+    100% {transform: rotate(360deg)}
+} 
+
+.gradient{
+    width: 200px;
+    height: 200px;
+    background-size: 40%;
+    background-image: linear-gradient(90deg, green red);
+    animation: bg-animation 10s alternate infinite;
+}
+@keyframes bg-animation {
+    0% {background-position: left;}
+    50% {background-position: center;}
+    100% {background-position: right;}
+}
